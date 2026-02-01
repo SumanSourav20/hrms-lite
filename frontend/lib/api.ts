@@ -41,7 +41,7 @@ export const apiRequest = async (url: string, options: RequestInit = {}) => {
 
   const response = await fetch(url, defaultOptions);
   
-  if (!response.ok) {
+  if (!response.ok && response.status >= 500) {
     throw new Error(`API request failed: ${response.status} ${response.statusText}`);
   }
   
