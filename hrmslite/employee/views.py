@@ -15,6 +15,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.utils import timezone
 from django.db.models import OuterRef, Subquery
 
+from zoneinfo import ZoneInfo 
+
 # Create your views here.
     
 class EmployeeViewSet(viewsets.ModelViewSet):
@@ -25,7 +27,9 @@ class EmployeeViewSet(viewsets.ModelViewSet):
     ordering_fields = ['emp_id', 'full_name', 'email', 'department__name',]
     
     def get_queryset(self):
-        today = timezone.now().date()
+        ist = ZoneInfo("Asia/Kolkata")
+
+        today = timezone.now().astimezone(ist).date()
 
         today_attendance_qs = Attendence.objects.filter(
             employee=OuterRef('pk'),
