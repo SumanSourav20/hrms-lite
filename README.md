@@ -6,6 +6,8 @@ Set up docker locally , then from the root directory of the project do:
 
 docker compose up --build 
 
+** also don't forget to add the enviroment variables mentioned bellow 
+
 or to test localy (development mode) clone this repo and install "uv" and "node" and "postgres" 
 
 after installing postgres change the postgres user password or create user , create a database (hrms_lite named here)
