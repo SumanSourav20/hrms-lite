@@ -11,7 +11,7 @@ docker compose up --build
 or to test localy (development mode) clone this repo and install "uv" and "node" and "postgres" 
 
 after installing postgres change the postgres user password or create user , create a database (hrms_lite named here)
-use all the config and create a .env in backend directory(hrmslite)
+use all the config and create a .env in root directory
 
 DJANGO_SECRET_KEY = 'django-insecure-o1ekmwwfgbj-4p$20d+b^t%blzhm#_coxb2ekq1#ylh(ite)g=' (example you can generate your own)
 POSTGRES_USER = 'postgres' (or your created user)
