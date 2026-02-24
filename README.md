@@ -1,6 +1,12 @@
 Tech stack: postgres, django, react(nextjs)
 
-to test localy (all development mode) clone this repo and install "uv" and "node" and "postgres" 
+To Run Locally or deploy on server , use a LINUX (Debian based machine eg Ubuntu 24 )
+
+Set up docker locally , then from the root directory of the project do:
+
+docker compose up --build 
+
+or to test localy (development mode) clone this repo and install "uv" and "node" and "postgres" 
 
 after installing postgres change the postgres user password or create user , create a database (hrms_lite named here)
 use all the config and create a .env in backend directory(hrmslite)
